@@ -170,12 +170,27 @@ class _HomeState extends State<Home> {
                         children: <Widget>[
                           Row(
                             children: <Widget>[
-                              Text('Wisata Alam', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
-                              Icon(Icons.check_circle, color: Colors.red,)
+                              Text(
+                                'Wisata Alam',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 14),
+                              ),
+                              Icon(
+                                Icons.check_circle,
+                                color: Colors.red,
+                              )
                             ],
                           ),
-                          Text('Wisata Budaya', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
-                          Text('Wisata Kuliner', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
+                          Text(
+                            'Wisata Budaya',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
+                          Text(
+                            'Wisata Kuliner',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
                         ],
                       ),
                     ),
@@ -240,26 +255,16 @@ class _HomeState extends State<Home> {
   }
 
   slideShow(int index) {
-    return AnimatedBuilder(
-      animation: _pageController,
-      builder: (context, child) {
-        return SizedBox(
-          width: 300,
-          height: 400,
-          child: child,
-        );
-      },
-      child: Container(
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              _images[index],
-            ),
-            fit: BoxFit.cover,
+    return Container(
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+            _images[index],
           ),
-          borderRadius: BorderRadius.circular(20),
+          fit: BoxFit.cover,
         ),
+        borderRadius: BorderRadius.circular(20),
       ),
     );
   }
